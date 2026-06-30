@@ -1,0 +1,42 @@
+{
+  "title": "Analysis code for: Yield and curation burden of germline secondary findings in tumor-normal genome sequencing: a single-institution audit within the Japan WGS Program",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "description": "De-identified analysis and visualization scripts accompanying a single-institution implementation audit of germline secondary findings (SFs) in tumor-normal whole-genome sequencing within the Japan WGS Program. The repository contains four pipelines: (1) SNV/indel pathogenic / likely-pathogenic extraction from ANNOVAR/InterVar/ClinVar annotations; (2) CNV calling (CNVkit) with AnnotSV ACMG class 4/5 prioritization; (3) pharmacogenomics with PharmCAT; and (4) genetic-ancestry inference by gnomAD v3.1 PCA projection. No participant-level data are included; all file-system paths are de-identified placeholders. See README for inputs, outputs, and dependency versions.",
+  "creators": [
+    { "name": "Kushima, Itaru", "affiliation": "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan" },
+    { "name": "Morikawa, Maki", "affiliation": "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan" },
+    { "name": "Kondo, Chiaki", "affiliation": "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan" },
+    { "name": "Mogi, Kazumasa", "affiliation": "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan" },
+    { "name": "Hatakeyama, Miki", "affiliation": "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan" },
+    { "name": "Takatsuka, Mii", "affiliation": "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan" },
+    { "name": "Nakaguro, Masato", "affiliation": "Department of Pathology and Laboratory Medicine, Nagoya University Graduate School of Medicine, Nagoya, Japan" },
+    { "name": "Haratake, Mari", "affiliation": "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan" },
+    { "name": "Katayama, Kotoe", "affiliation": "Human Genome Center, The Institute of Medical Science, The University of Tokyo, Tokyo, Japan" },
+    { "name": "Imoto, Seiya", "affiliation": "Human Genome Center, The Institute of Medical Science, The University of Tokyo, Tokyo, Japan" },
+    { "name": "Kokuryo, Toshio", "affiliation": "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan" },
+    { "name": "Ando, Yuichi", "affiliation": "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan" }
+  ],
+  "keywords": [
+    "secondary findings",
+    "ACMG SF v3.2",
+    "cancer genome sequencing",
+    "tumor-normal WGS",
+    "ClinVar",
+    "CNVkit",
+    "AnnotSV",
+    "PharmCAT",
+    "genetic ancestry",
+    "PCA projection",
+    "implementation",
+    "Japan WGS Program"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/KushimaItaru/cancerWGS-germline-secondary-findings",
+      "scheme": "url"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated article and this repository."
+title: >-
+  Analysis code for: Yield and curation burden of germline secondary findings in
+  tumor-normal genome sequencing: a single-institution audit within the Japan WGS Program
+type: software
+authors:
+  - family-names: Kushima
+    given-names: Itaru
+    affiliation: "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan"
+  - family-names: Morikawa
+    given-names: Maki
+    affiliation: "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan"
+  - family-names: Kondo
+    given-names: Chiaki
+    affiliation: "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan"
+  - family-names: Mogi
+    given-names: Kazumasa
+    affiliation: "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan"
+  - family-names: Hatakeyama
+    given-names: Miki
+    affiliation: "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan"
+  - family-names: Takatsuka
+    given-names: Mii
+    affiliation: "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan"
+  - family-names: Nakaguro
+    given-names: Masato
+    affiliation: "Department of Pathology and Laboratory Medicine, Nagoya University Graduate School of Medicine, Nagoya, Japan"
+  - family-names: Haratake
+    given-names: Mari
+    affiliation: "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan"
+  - family-names: Katayama
+    given-names: Kotoe
+    affiliation: "Human Genome Center, The Institute of Medical Science, The University of Tokyo, Tokyo, Japan"
+  - family-names: Imoto
+    given-names: Seiya
+    affiliation: "Human Genome Center, The Institute of Medical Science, The University of Tokyo, Tokyo, Japan"
+  - family-names: Kokuryo
+    given-names: Toshio
+    affiliation: "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan"
+  - family-names: Ando
+    given-names: Yuichi
+    affiliation: "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan"
+repository-code: "https://github.com/KushimaItaru/cancerWGS-germline-secondary-findings"
+license: MIT
+version: 1.0.0
+date-released: "2026-06-30"
+keywords:
+  - secondary findings
+  - ACMG
+  - cancer genome sequencing
+  - tumor-normal WGS
+  - ClinVar
+  - CNVkit
+  - AnnotSV
+  - PharmCAT
+  - genetic ancestry
+  - Japan WGS Program

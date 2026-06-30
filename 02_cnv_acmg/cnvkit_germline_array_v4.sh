@@ -59,7 +59,7 @@ for f in "${CNVKIT_IMAGE}" "${POOLED_REFERENCE}" "${SAMPLE_LIST}"; do
         echo "ERROR: 必須ファイルが見つかりません: ${f}"
         exit 1
     fi
-    echo "  OK ${f}"
+    echo "  ✓ ${f}"
 done
 echo ""
 

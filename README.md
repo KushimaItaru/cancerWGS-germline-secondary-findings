@@ -28,9 +28,10 @@ analyses were executed; adapt them to your own scheduler/environment.
 ## Repository layout
 
 ```
-code_release/
+cancerWGS-germline-secondary-findings/   # repository root
 ├── README.md
 ├── LICENSE
+├── .gitignore
 ├── 01_snv_indel_pathogenic/
 │   ├── variant_filter_parallel_v4.py   # per-sample P/LP SNV/indel extraction (array task)
 │   ├── run_variant_filter.sh           # SGE array-job wrapper
@@ -148,7 +149,7 @@ The analyses were run on Linux (HPC, Grid Engine). Versions used:
 |------|---------|---------|
 | Python | 3.x | all pipelines |
 | pandas, numpy | — | 1, 2, 4 |
-| intervaltree | — | 2 (`filter_cnvs_v2.py`) |
+| intervaltree | — | 2 (`filter_cnvs_v3.py`) |
 | scipy | — | 4 (`run_08`) |
 | onnxruntime | — | 4 (`run_05`) |
 | matplotlib | — | 4 (visualization) |

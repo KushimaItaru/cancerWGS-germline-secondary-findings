@@ -1,0 +1,59 @@
+# =============================================================================
+# .gitignore — prevent accidental commits of participant-level data / outputs.
+# This repository must contain CODE ONLY. No genomes, VCFs, BAMs, manifests,
+# sample IDs, or analysis outputs may be committed.
+# =============================================================================
+
+# --- Sequence / variant / annotation data (never commit) ---
+*.vcf
+*.vcf.gz
+*.vcf.gz.tbi
+*.tbi
+*.bgz
+*.bcf
+*.bam
+*.bai
+*.cram
+*.crai
+*.cns
+*.cnr
+*.bed
+*.bed.gz
+*.tsv
+*.tsv.gz
+*.afreq
+*.sscore
+*.pgen
+*.pvar
+*.psam
+*.onnx
+*.sif
+
+# --- Sample manifests / lists (contain sample IDs) ---
+sample_list*.txt
+sample_manifest*.txt
+uuid_list*.txt
+SF_106Genes.txt
+
+# --- Pipeline working / output directories ---
+results/
+cnv_allSample/
+filtered_variants/
+vcf_subset/
+merged/
+pca/
+sitelist/
+reference/
+output/
+logs/
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp

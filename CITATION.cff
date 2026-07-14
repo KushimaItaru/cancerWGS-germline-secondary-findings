@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software, please cite the associated article and this repository."
 title: >-
   Analysis code for: Auditable return governance for germline secondary findings in
-  tumor-normal genome sequencing: A single-institution Japan WGS Program audit
+  tumor-normal genome sequencing: A single-institution audit of the Japan WGS Program
 type: software
 authors:
   - family-names: Kushima

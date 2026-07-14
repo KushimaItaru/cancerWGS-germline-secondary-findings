@@ -3,7 +3,7 @@
 This repository contains the analysis and visualization scripts used in:
 
 > *Auditable return governance for germline secondary findings in tumor-normal
-> genome sequencing: A single-institution Japan WGS Program audit.*
+> genome sequencing: A single-institution audit of the Japan WGS Program.*
 
 The scripts reproduce the four computational components of the study:
 

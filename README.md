@@ -1,9 +1,9 @@
-# Analysis code for germline secondary findings in tumour–normal genome sequencing
+# Analysis code for germline secondary findings in tumor-normal genome sequencing
 
 This repository contains the analysis and visualization scripts used in:
 
-> *Yield and curation burden of germline secondary findings in tumour–normal
-> genome sequencing: a single-institution audit within the Japan WGS Program.*
+> *Auditable return governance for germline secondary findings in tumor-normal
+> genome sequencing: A single-institution Japan WGS Program audit.*
 
 The scripts reproduce the four computational components of the study:
 

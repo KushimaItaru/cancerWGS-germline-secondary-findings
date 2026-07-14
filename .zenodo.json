@@ -3,7 +3,7 @@
   "upload_type": "software",
   "access_right": "open",
   "license": "MIT",
-  "description": "De-identified analysis and visualization scripts accompanying a single-institution implementation audit of germline secondary findings (SFs) in tumor-normal whole-genome sequencing within the Japan WGS Program. The repository contains four pipelines: (1) SNV/indel pathogenic / likely-pathogenic extraction from ANNOVAR/InterVar/ClinVar annotations; (2) CNV calling (CNVkit) with AnnotSV ACMG class 4/5 prioritization; (3) pharmacogenomics with PharmCAT; and (4) genetic-ancestry inference by gnomAD v3.1 PCA projection. No participant-level data are included; all file-system paths are de-identified placeholders. See README for inputs, outputs, and dependency versions.",
+  "description": "De-identified analysis and visualization scripts accompanying a single-institution implementation audit of germline secondary findings (SFs) in tumor-normal whole-genome sequencing within the Japan WGS Program. The repository contains three pipelines: (1) SNV/indel pathogenic / likely-pathogenic extraction from ANNOVAR/InterVar/ClinVar annotations; (2) CNV calling (CNVkit) with AnnotSV ACMG class 4/5 prioritization; and (3) genetic-ancestry inference by gnomAD v3.1 PCA projection. No participant-level data are included; all file-system paths are de-identified placeholders. See README for inputs, outputs, and dependency versions.",
   "creators": [
     { "name": "Kushima, Itaru", "affiliation": "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan" },
     { "name": "Morikawa, Maki", "affiliation": "Medical Genomics Center, Nagoya University Hospital, Nagoya, Japan" },
@@ -26,7 +26,6 @@
     "ClinVar",
     "CNVkit",
     "AnnotSV",
-    "PharmCAT",
     "genetic ancestry",
     "PCA projection",
     "implementation",

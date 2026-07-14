@@ -5,12 +5,11 @@ This repository contains the analysis and visualization scripts used in:
 > *Auditable return governance for germline secondary findings in tumor-normal
 > genome sequencing: A single-institution audit of the Japan WGS Program.*
 
-The scripts reproduce the four computational components of the study:
+The scripts reproduce the three computational components of the study:
 
 1. **SNV/indel pathogenic-variant extraction** (`01_snv_indel_pathogenic/`)
 2. **CNV calling and ACMG class 4/5 prioritization** (`02_cnv_acmg/`)
-3. **Pharmacogenomics with PharmCAT** (`03_pharmacogenomics_pharmcat/`)
-4. **Genetic-ancestry inference by PCA projection** (`04_ancestry_pca/`)
+3. **Genetic-ancestry inference by PCA projection** (`03_ancestry_pca/`)
 
 > **No participant-level data are included in this repository.** Input genomes,
 > VCFs, BAMs, sample manifests, and individual identifiers are *not* distributed
@@ -43,11 +42,7 @@ cancerWGS-germline-secondary-findings/   # repository root
 │   ├── run_annotsv_all_samples_v2.sh   # AnnotSV annotation (assigns ACMG/ClinGen class)
 │   ├── filter_cnvs_v3.py               # ACMG class 4/5 + autosomal + segdup<70% selection
 │   └── install_annotsv_local.sh        # local AnnotSV v3.3.6 install helper
-├── 03_pharmacogenomics_pharmcat/
-│   ├── run_pharmcat_preprocess_v3.sh   # PharmCAT VCF preprocessing (--absent-to-ref)
-│   ├── run_pharmcat_ref_v2.sh          # PharmCAT v2.15.5 run
-│   └── summarize_pharmcat_genes_v7.py  # aggregate DPYD/TPMT/UGT1A1/NUDT15/G6PD phenotypes
-└── 04_ancestry_pca/
+└── 03_ancestry_pca/
     ├── run_01_prepare_loadings_05232026.py        # gnomAD v3.1 loadings -> PLINK2 inputs
     ├── run_02_extract_subset_vcfs_05232026_v2.sh  # subset normal VCFs to loading SNPs (array)
     ├── run_03_merge_and_plink_05232026_v2.sh      # merge subsets -> PLINK2 pgen
@@ -110,16 +105,7 @@ classes are configurable with `--acmg-classes` (default `4,5`).
 > population frequency; that extra filter is **not** part of the manuscript's
 > 82-event CNV definition and is therefore not included here.
 
-## Pipeline 3 — Pharmacogenomics (PharmCAT)
-
-**Input.** Per-sample normal DeepVariant VCFs, the PharmCAT VCF preprocessor, and
-`pharmcat-2.15.5-all.jar` (Java 17).
-
-**Procedure.** Preprocess each VCF with `--absent-to-ref`, run PharmCAT v2.15.5,
-then aggregate phenotypes for the oncology-relevant genes
-DPYD, TPMT, UGT1A1, NUDT15, and G6PD into a wide TSV.
-
-## Pipeline 4 — Genetic-ancestry inference (PCA projection)
+## Pipeline 3 — Genetic-ancestry inference (PCA projection)
 
 **Input.** Per-sample normal DeepVariant VCFs and public gnomAD v3.1 resources:
 PCA loadings (`gnomad.v3.1.pca_loadings.tsv.gz`), the random-forest ancestry
@@ -148,22 +134,20 @@ The analyses were run on Linux (HPC, Grid Engine). Versions used:
 | Tool | Version | Used in |
 |------|---------|---------|
 | Python | 3.x | all pipelines |
-| pandas, numpy | — | 1, 2, 4 |
+| pandas, numpy | — | 1, 2, 3 |
 | intervaltree | — | 2 (`filter_cnvs_v3.py`) |
-| scipy | — | 4 (`run_08`) |
-| onnxruntime | — | 4 (`run_05`) |
-| matplotlib | — | 4 (visualization) |
+| scipy | — | 3 (`run_08`) |
+| onnxruntime | — | 3 (`run_05`) |
+| matplotlib | — | 3 (visualization) |
 | DeepVariant | (upstream caller) | input VCFs |
 | ANNOVAR + InterVar | — | 1 (annotation/classification, upstream) |
 | ClinVar `variant_summary` (GRCh38) | 2021-10 anchor + later refresh | 1 |
 | CNVkit | 0.9 | 2 |
 | AnnotSV | 3.3.6 | 2 |
 | bedtools / samtools | 2.31.1 / 1.19 | 2 |
-| PharmCAT | 2.15.5 | 3 |
-| Java | 17 | 3 |
-| htslib / bcftools (bgzip, tabix) | 1.19 | 3, 4 |
-| PLINK2 | — | 4 |
-| gnomAD v3.1 loadings / RF model / HGDP+1KG metadata | v3.1 | 4 |
+| htslib / bcftools (bgzip, tabix) | 1.19 | 3 |
+| PLINK2 | — | 3 |
+| gnomAD v3.1 loadings / RF model / HGDP+1KG metadata | v3.1 | 3 |
 | ToMMo 38KJPN allele frequencies | 38KJPN | 1 (annotation) |
 
 CNVkit is executed from a container image; AnnotSV can be installed locally with
@@ -176,7 +160,7 @@ CNVkit is executed from a container image; AnnotSV can be installed locally with
 Before publication, the following were removed or replaced with placeholders:
 internal file-system paths, cluster/queue/group names, usernames, host names,
 and example sample identifiers. Scripts that emit per-sample tables or labelled
-figures (e.g. `04_ancestry_pca/run_08_*`) should be published **without** their
+figures (e.g. `03_ancestry_pca/run_08_*`) should be published **without** their
 output directories, since those outputs can contain sample IDs.
 
 ## License
